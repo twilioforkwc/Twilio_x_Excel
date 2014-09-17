@@ -1,0 +1,40 @@
+<h1>通話履歴</h1>
+
+<%= paginate @call_histories %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Call SID</th>
+      <th>通話開始時間</th>
+      <th>ステータス</th>
+      <th>押されたボタン</th>
+      <th>利用者ID</th>
+      <th>通話時間（秒）</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @call_histories.each do |call_history| %>
+      <tr>
+        <td><%= call_history.call_sid %></td>
+        <td><%= call_history.created_at.strftime("%Y-%m-%d %T") %></td>
+<% status = case call_history.status %>
+<% when Settings.status_init; "通話準備中"  %>
+<% when Settings.status_start; "通話開始"  %>
+<% when Settings.status_end; "通話終了"  %>
+<% when Settings.status_ivr_ok; "応答済"  %>
+<% when Settings.status_cancel; "キャンセル"  %>
+<% default; "" %>
+<% end %>
+        <td><%= status %></td>
+        <td><%= call_history.ivr_result %></td>
+        <td><%= call_history.user_app_id %></td>
+        <td><%= call_history.duration %>秒</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= paginate @call_histories %>

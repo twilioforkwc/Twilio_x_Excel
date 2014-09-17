@@ -1,0 +1,32 @@
+<div class="form center">
+	<div class="center">
+<% if @account[:phone_number].nil? %>
+				<p>発信先番号の検証が必要です。詳しくは<a href="https://twilioforkwc.zendesk.com/entries/23590763-%E7%84%A1%E6%96%99%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB-%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AF%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E4%BD%BF%E3%81%84%E3%81%BE%E3%81%99%E3%81%8B-" target="_blank">こちら</a>。</p>
+<% else %>
+<div class="input">
+	<p>発信番号選択</p>
+<select id="from_number">
+<% @account[:phone_number].each do |number| %>
+	<option value="<%= number %>"><%= number %></option>
+<% end %>
+</select>
+</div>
+<% end %>
+</div>
+	<div class="form buttons">
+		<%= image_tag "select.png", :class => "phone_button button_left", :id => "select_cells" %>
+		<%= image_tag "setup.png", :class => "phone_button", :id => "create_table"  %>
+		<%= image_tag "start.png", :class => "phone_button button_left", :id => "start_call_button" %>
+		<%= image_tag "stop.png", :class => "phone_button", :id => "stop_call_button" %>
+	</div>
+</div>
+<div class="account-type">
+<% if @account[:type] == 'Full' %>
+アップグレードアカウント
+<% else %>
+トライアルアカウント
+			<div class="box">
+				「アップグレードアカウント」を<br />ご希望の方は<a href="http://twilio.kddi-web.com/" target="_blank">こちら</a>をご覧ください。
+			</div>
+<% end %>
+</div>

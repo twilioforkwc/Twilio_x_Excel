@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Auth token:</strong>
+  <%= @user_app.auth_token %>
+</p>
+
+<p>
+  <strong>App sid:</strong>
+  <%= @user_app.account_sid %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @user_app.token %>
+</p>
+
+<%= link_to 'Edit', edit_user_app_path(@user_app) %> |
+<%= link_to 'Back', user_apps_path %>

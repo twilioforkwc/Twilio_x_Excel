@@ -1,0 +1,49 @@
+<%= form_for(@call_history) do |f| %>
+  <% if @call_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@call_history.errors.count, "error") %> prohibited this call_history from being saved:</h2>
+
+      <ul>
+      <% @call_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :ivr_result %><br>
+    <%= f.text_field :ivr_result %>
+  </div>
+  <div class="field">
+    <%= f.label :user_app_id %><br>
+    <%= f.number_field :user_app_id %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :call_sid %><br>
+    <%= f.text_field :call_sid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+defaults: &defaults
+  app_name: 'Excel + Twilio'
+  status_init: 0
+  status_start: 1
+  status_end: 2
+  status_ivr_ok: 4
+  status_cancel: 5
+
+production:
+  <<: *defaults
+  protocol: https
+  service_host: your.domain.com
+
+development:
+  <<: *defaults
+  protocol: http
+  service_host: your.domain.com
+
+test:
+  <<: *defaults
+  protocol: http
+  service_host: your.domain.com

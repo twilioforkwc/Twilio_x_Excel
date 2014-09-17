@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @call_history.phone_number %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @call_history.status %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @call_history.body %>
+</p>
+
+<p>
+  <strong>Ivr result:</strong>
+  <%= @call_history.ivr_result %>
+</p>
+
+<p>
+  <strong>User app:</strong>
+  <%= @call_history.user_app_id %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @call_history.duration %>
+</p>
+
+<p>
+  <strong>Call sid:</strong>
+  <%= @call_history.call_sid %>
+</p>
+
+<%= link_to 'Edit', edit_call_history_path(@call_history) %> |
+<%= link_to 'Back', call_histories_path %>

@@ -1,0 +1,43 @@
+<div class="center">
+<%= image_tag 'banner.png', :class => :banner %>
+<hr />
+<div class="top-message">
+	<p>「Twilio x Excelで電話連絡」は<br />一斉連絡ができるアプリです</p>
+</div>
+<div class="input">
+	&gt; <a href="http://twilio.kddi-web.com/solutions/excel/">ご利用方法</a>
+</div>
+<div class="alert_message"></div>
+<div class="container">
+	<div class="login_form">
+	<%= form_for @user_app, :remote => true do |f| %>
+		<div class="input">
+			<p>Account SID</p>
+			<input type="text" id="account_sid" name="user_app[account_sid]" />
+		</div>
+		<div class="input">
+			<p>Auth Token</p>
+			<input type="text" id="auth_token" name="user_app[auth_token]" />
+		</div>
+		<div class="input">
+						<%= image_tag 'b.png', :class => "login_button", :id => :login_off %>
+		</div>
+		<div class="input">
+			<div class="box">
+							「Account SID」・「Auth Token」をお持ちでない方は、<a href="http://twilio.kddi-web.com/" target="_blank">こちら</a>をご覧ください。
+			</div>
+		</div>
+	<% end %>
+	</div><!--login_form-->
+
+	<div class="start_form hidden">
+		<div class="input">
+			<%= image_tag "login06.png", :class => "login_button", :id => "auth_login" %>
+		</div>
+	</div>
+
+</div><!--conteiner-->
+
+<div class="input">
+	<%= image_tag "kddi.png" %>
+</div>

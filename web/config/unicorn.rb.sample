@@ -1,0 +1,16 @@
+listen 3005 # by default Unicorn listens on port 8080
+worker_processes 2 # this should be >= nr_cpus
+case ENV['RAILS_ENV']
+when "production"
+	pid "/home/develop/Ruby/Rails/TwilioExcel/shared/pids/unicorn.pid"
+	stderr_path "/home/develop/Ruby/Rails/TwilioExcel/shared/log/unicorn.log"
+	stdout_path "/home/develop/Ruby/Rails/TwilioExcel/shared/log/unicorn.log"
+when "test"
+	pid "/home/develop/Ruby/Rails/TwilioExcel/shared/pids/unicorn.pid"
+	stderr_path "/home/develop/Ruby/Rails/TwilioExcel/shared/log/unicorn.log"
+	stdout_path "/home/develop/Ruby/Rails/TwilioExcel/shared/log/unicorn.log"
+else
+	pid "/home/develop/Ruby/Rails/TwilioExcel/shared/pids/unicorn.pid"
+	stderr_path "/home/develop/Ruby/Rails/TwilioExcel/shared/log/unicorn.log"
+	stdout_path "/home/develop/Ruby/Rails/TwilioExcel/shared/log/unicorn.log"
+end

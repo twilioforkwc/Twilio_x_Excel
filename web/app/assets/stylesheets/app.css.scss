@@ -1,0 +1,114 @@
+// Place all the styles related to the app controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a{
+	text-decoration: underline;
+}
+
+a:hover{
+  background-color: transparent;
+  color: Red;
+  text-decoration: none;
+}
+
+hr{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.center{
+	text-align: center;
+}
+
+.top-message{
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.banner{
+	padding-top: 25px;
+}
+
+.input{
+	padding-bottom: 20px;
+}
+
+.alert{
+	margin-top: 20px;
+}
+
+.start_form{
+	padding-top: 20px;
+}
+
+.login_form{
+	padding-top: 0px;
+}
+
+.form{
+	margin-top: 0px;
+	margin-bottom: 40px;
+	line-height: 200%;
+}
+
+.alert_message{
+	margin-top: 0px;
+	color: Red;
+	text-align: center;
+}
+
+#account_sid{
+	width: 263px;
+}
+
+#auth_token{
+	width: 263px;
+}
+
+#from_number{
+	width: 263px;
+}
+
+.input p{
+	text-align: center;
+	position: relative;
+	left: -90px;
+	font-weight: bold;
+}
+
+.box{
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 263px;
+}
+
+.login_button{
+	cursor: pointer;
+	border: 1px dotted;
+}
+
+.account-type{
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.phone_button{
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.button_left{
+	margin-right: -5px;
+}
+
+.buttons{
+	width: 294px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+
